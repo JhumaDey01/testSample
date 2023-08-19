@@ -21,6 +21,6 @@ public class SampleTest1 {
 		  srcBox.sendKeys("Cypress");
 		  srcBox.sendKeys(Keys.ENTER);
 		  Assert.assertEquals(driver.getTitle(), "Cypress - Google Search");
-		 
+		  driver.close();
 	  }
 }

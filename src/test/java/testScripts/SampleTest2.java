@@ -7,18 +7,13 @@ import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.testng.Assert;
-import org.testng.annotations.AfterMethod;
 import org.testng.annotations.AfterTest;
-import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
 
-public class GoogleSearch {
+public class SampleTest2 {
 	WebDriver driver;
-
-	//@BeforeMethod
 	@BeforeTest
 	public void launchGoogle() {
 		driver = new ChromeDriver();
@@ -27,7 +22,7 @@ public class GoogleSearch {
 		driver.manage().window().maximize();
 	}
 
-	@Test(priority =0)
+	@Test
 	public void searchJava() {
 		SoftAssert softassert = new SoftAssert();
 		softassert.assertEquals(driver.getTitle(),"Google Page");
@@ -38,7 +33,7 @@ public class GoogleSearch {
 		softassert.assertEquals(driver.getTitle(), "Java Tutorials - Google Search");
 		softassert.assertAll();
 	}
-	@Test(priority =1)
+	@Test(alwaysRun = true,dependsOnMethods = "searchCucumber" )
 	public void searchAppium() {
 		SoftAssert softassert = new SoftAssert();
 		softassert.assertEquals(driver.getTitle(),"Google Page");
@@ -49,7 +44,7 @@ public class GoogleSearch {
 		softassert.assertEquals(driver.getTitle(), "Appium Tutorials - Google Search");
 		softassert.assertAll();
 	}
-	@Test(priority = 2)
+	@Test
 	public void searchCucumber() {
 		SoftAssert softassert = new SoftAssert();
 		softassert.assertEquals(driver.getTitle(),"Google Page");
@@ -60,18 +55,9 @@ public class GoogleSearch {
 		softassert.assertEquals(driver.getTitle(), "Cucumber Tutorials - Google Search");
 		softassert.assertAll();
 	}
-	@Test(enabled=false)
-	public void searchSelenium() {
-		WebElement srcBox = driver.findElement(By.xpath("//textarea[@id='APjFqb']"));
-		srcBox.clear();
-		srcBox.sendKeys("Selenium Tutorials");
-		srcBox.sendKeys(Keys.ENTER);
-		Assert.assertEquals(driver.getTitle(), "selenium Tutorials - Google Search");
-
-	}
-	//@AfterMethod
 	@AfterTest
 	public void tearDown() {
-		driver.close(); 
+		driver.close();
 	}
+
 }

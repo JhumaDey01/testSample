@@ -4,7 +4,11 @@
   <test thread-count="5" name="ModuleOneTest">
     <classes>
       <class name="testScripts.GoogleSearch"/>
-      <class name="testScripts.SampleTest1"/>
     </classes>
   </test> <!-- ModuleOneTest -->
+    <test thread-count="5" name="ModuleTwoTest">
+    <classes>
+      <class name="testScripts.SampleTest1"/>
+    </classes>
+  </test> <!-- ModuleTwoTest -->
 </suite> <!-- SampleSuite -->
