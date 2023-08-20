@@ -1,15 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
 <suite name="Failed suite [SampleSuite]" guice-stage="DEVELOPMENT">
+  <parameter name="browser" value="chrome"/>
   <test thread-count="5" name="ModuleOneTest(failed)">
     <classes>
-      <class name="testScripts.GoogleSearch">
+      <class name="testScripts.SampleTest1">
         <methods>
+          <include name="setUp"/>
+          <include name="searchCypress"/>
           <include name="tearDown"/>
-          <include name="launchGoogle"/>
-          <include name="searchSelenium"/>
         </methods>
-      </class> <!-- testScripts.GoogleSearch -->
+      </class> <!-- testScripts.SampleTest1 -->
     </classes>
   </test> <!-- ModuleOneTest(failed) -->
 </suite> <!-- Failed suite [SampleSuite] -->
