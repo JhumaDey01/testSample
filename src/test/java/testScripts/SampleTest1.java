@@ -36,14 +36,14 @@ public class SampleTest1 {
 		  driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
 		  driver.get("https://www.google.com/");
 	}
-	  @Test
+	  @Test(retryAnalyzer = RetryAnalyzer.class)
 	  public void searchCypress() {
 
 		  driver.manage().window().maximize();
 		  WebElement srcBox = driver.findElement(By.xpath("//textarea[@id='APjFqb']"));
 		  srcBox.sendKeys("Cypress");
 		  srcBox.sendKeys(Keys.ENTER);
-		  Assert.assertEquals(driver.getTitle(), "Cypress - Google Search");
+		  Assert.assertEquals(driver.getTitle(), "Cypress - Google Search page");
 		  
 	  }
 	  @AfterMethod
