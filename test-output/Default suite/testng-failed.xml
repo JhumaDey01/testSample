@@ -3,15 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="testScripts.SampleTest5">
+      <class name="testScripts.loginPageTest">
         <methods>
-          <include name="launchGoogle"/>
-          <include name="setUpExtenetReport"/>
-          <include name="tearDown"/>
-          <include name="finishExtenet"/>
-          <include name="searchCucumber"/>
+          <include name="ValidLogin"/>
+          <include name="teardown"/>
+          <include name="setUp"/>
         </methods>
-      </class> <!-- testScripts.SampleTest5 -->
+      </class> <!-- testScripts.loginPageTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
