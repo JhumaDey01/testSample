@@ -1,25 +1,125 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+<testng-results ignored="0" total="1" passed="0" failed="0" skipped="1">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-08-21T07:32:51 GMT" name="Default suite" finished-at="2023-08-21T07:32:59 GMT" duration-ms="7417">
+  <suite started-at="2023-08-22T05:03:07 GMT" name="Default suite" finished-at="2023-08-22T05:03:10 GMT" duration-ms="2638">
     <groups>
     </groups>
-    <test started-at="2023-08-21T07:32:51 GMT" name="Default test" finished-at="2023-08-21T07:32:59 GMT" duration-ms="7417">
-      <class name="testScripts.createUser">
-        <test-method is-config="true" signature="setUp()[pri:0, instance:testScripts.createUser@437da279]" started-at="2023-08-21T07:32:51 GMT" name="setUp" finished-at="2023-08-21T07:32:54 GMT" duration-ms="2974" status="PASS">
+    <test started-at="2023-08-22T05:03:07 GMT" name="Default test" finished-at="2023-08-22T05:03:10 GMT" duration-ms="2638">
+      <class name="testScripts.CDPTest">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:testScripts.CDPTest@729d991e]" started-at="2023-08-22T05:03:07 GMT" name="setUp" finished-at="2023-08-22T05:03:10 GMT" duration-ms="2524" status="FAIL">
+          <exception class="org.openqa.selenium.devtools.DevToolsException">
+            <message>
+              <![CDATA[You are using a no-op implementation of the CDP. The most likely reason for this is that Selenium was unable to find an implementation of the CDP protocol that matches your browser. Please be sure to include an implementation on the classpath, possibly by adding a new (maven) dependency of `org.seleniumhq.selenium:selenium-devtools-vNN:4.11.0` where `NN` matches the major version of the browser you're using.
+Build info: version: '4.11.0', revision: '040bc5406b'
+System info: os.name: 'Windows Server 2019', os.arch: 'amd64', os.version: '10.0', java.version: '16.0.2'
+Driver info: DevTools Connection]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.devtools.DevToolsException: You are using a no-op implementation of the CDP. The most likely reason for this is that Selenium was unable to find an implementation of the CDP protocol that matches your browser. Please be sure to include an implementation on the classpath, possibly by adding a new (maven) dependency of `org.seleniumhq.selenium:selenium-devtools-vNN:4.11.0` where `NN` matches the major version of the browser you're using.
+Build info: version: '4.11.0', revision: '040bc5406b'
+System info: os.name: 'Windows Server 2019', os.arch: 'amd64', os.version: '10.0', java.version: '16.0.2'
+Driver info: DevTools Connection
+at org.openqa.selenium.devtools.noop.NoOpDomains.target(NoOpDomains.java:60)
+at org.openqa.selenium.devtools.DevTools.findTarget(DevTools.java:163)
+at org.openqa.selenium.devtools.DevTools.createSession(DevTools.java:123)
+at org.openqa.selenium.devtools.DevTools.createSession(DevTools.java:109)
+at testScripts.CDPTest.setUp(CDPTest.java:19)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:78)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:567)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:69)
+at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:361)
+at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:296)
+at org.testng.internal.invokers.TestInvoker.runConfigMethods(TestInvoker.java:823)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:590)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:969)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:829)
+at org.testng.TestRunner.run(TestRunner.java:602)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:437)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:431)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:391)
+at org.testng.SuiteRunner.run(SuiteRunner.java:330)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1256)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1176)
+at org.testng.TestNG.runSuites(TestNG.java:1099)
+at org.testng.TestNG.run(TestNG.java:1067)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.devtools.DevToolsException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="validLogin()[pri:0, instance:testScripts.createUser@437da279]" started-at="2023-08-21T07:32:54 GMT" name="validLogin" finished-at="2023-08-21T07:32:59 GMT" duration-ms="4248" status="PASS">
+        <test-method signature="viewPortTest()[pri:0, instance:testScripts.CDPTest@729d991e]" started-at="2023-08-22T05:03:10 GMT" name="viewPortTest" finished-at="2023-08-22T05:03:10 GMT" duration-ms="0" status="SKIP">
+          <exception class="org.openqa.selenium.devtools.DevToolsException">
+            <message>
+              <![CDATA[You are using a no-op implementation of the CDP. The most likely reason for this is that Selenium was unable to find an implementation of the CDP protocol that matches your browser. Please be sure to include an implementation on the classpath, possibly by adding a new (maven) dependency of `org.seleniumhq.selenium:selenium-devtools-vNN:4.11.0` where `NN` matches the major version of the browser you're using.
+Build info: version: '4.11.0', revision: '040bc5406b'
+System info: os.name: 'Windows Server 2019', os.arch: 'amd64', os.version: '10.0', java.version: '16.0.2'
+Driver info: DevTools Connection]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.devtools.DevToolsException: You are using a no-op implementation of the CDP. The most likely reason for this is that Selenium was unable to find an implementation of the CDP protocol that matches your browser. Please be sure to include an implementation on the classpath, possibly by adding a new (maven) dependency of `org.seleniumhq.selenium:selenium-devtools-vNN:4.11.0` where `NN` matches the major version of the browser you're using.
+Build info: version: '4.11.0', revision: '040bc5406b'
+System info: os.name: 'Windows Server 2019', os.arch: 'amd64', os.version: '10.0', java.version: '16.0.2'
+Driver info: DevTools Connection
+at org.openqa.selenium.devtools.noop.NoOpDomains.target(NoOpDomains.java:60)
+at org.openqa.selenium.devtools.DevTools.findTarget(DevTools.java:163)
+at org.openqa.selenium.devtools.DevTools.createSession(DevTools.java:123)
+at org.openqa.selenium.devtools.DevTools.createSession(DevTools.java:109)
+at testScripts.CDPTest.setUp(CDPTest.java:19)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:78)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:567)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:69)
+at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:361)
+at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:296)
+at org.testng.internal.invokers.TestInvoker.runConfigMethods(TestInvoker.java:823)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:590)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:969)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:829)
+at org.testng.TestRunner.run(TestRunner.java:602)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:437)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:431)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:391)
+at org.testng.SuiteRunner.run(SuiteRunner.java:330)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1256)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1176)
+at org.testng.TestNG.runSuites(TestNG.java:1099)
+at org.testng.TestNG.run(TestNG.java:1067)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.devtools.DevToolsException -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- validLogin -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:testScripts.createUser@437da279]" started-at="2023-08-21T07:32:59 GMT" name="tearDown" finished-at="2023-08-21T07:32:59 GMT" duration-ms="126" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-      </class> <!-- testScripts.createUser -->
+        </test-method> <!-- viewPortTest -->
+      </class> <!-- testScripts.CDPTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

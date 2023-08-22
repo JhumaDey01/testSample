@@ -3,13 +3,12 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="testScripts.SampleTest1">
+      <class name="testScripts.CDPTest">
         <methods>
+          <include name="viewPortTest"/>
           <include name="setUp"/>
-          <include name="searchCypress"/>
-          <include name="tearDown"/>
         </methods>
-      </class> <!-- testScripts.SampleTest1 -->
+      </class> <!-- testScripts.CDPTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
